@@ -152,3 +152,7 @@ HomeScreen
       ├── Content Input
       └── Action Buttons
 ```
+
+### This video demonstrates the core functionality of the Notes App.
+
+[![Watch the demo](https://img.shields.io/badge/Watch-Demo-blue)](https://ik.imagekit.io/fxwlz5gms/users/demo.mp4)
