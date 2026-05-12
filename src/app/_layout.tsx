@@ -1,16 +1,36 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import React from 'react';
-import { useColorScheme } from 'react-native';
+import { Stack } from "expo-router";
+import { StyleSheet } from "react-native";
 
-import { AnimatedSplashOverlay } from '@/components/animated-icon';
-import AppTabs from '@/components/app-tabs';
-
-export default function TabLayout() {
-  const colorScheme = useColorScheme();
+export default function RootLayout() {
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <AnimatedSplashOverlay />
-      <AppTabs />
-    </ThemeProvider>
+    <Stack
+      screenOptions={{
+        contentStyle: {
+          backgroundColor: "#f0f0f0",
+        },
+        headerStyle: {
+          backgroundColor: "#16A34A",
+        },
+        headerTintColor: "#FFFFFF",
+        headerTitleStyle: {
+          fontWeight: "bold",
+        },
+        title: "Notes App 📝",
+        headerShown: false,
+      }}
+    />
   );
 }
+
+const styles = StyleSheet.create({
+  toggleContainer: {
+    marginRight: 10,
+    alignItems: "center",
+  },
+
+  toggleText: {
+    fontSize: 12,
+    color: "#fff",
+    marginBottom: 8,
+  },
+});
